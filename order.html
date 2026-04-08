@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Garage Dinning | Order</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans">
+
+<!-- Navbar -->
+<header class="bg-gray-800 py-4 shadow-md sticky top-0 z-50">
+  <div class="max-w-6xl mx-auto flex justify-between items-center px-6">
+    <h1 class="text-2xl font-bold text-amber-400">Garage Dinning</h1>
+    <nav class="space-x-6">
+      <a href="index.html" class="hover:text-amber-400 transition">Home</a>
+      <a href="Menu.html" class="hover:text-amber-400 transition">Menu</a>
+      <a href="order.html" class="text-amber-400 font-semibold">Order</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="bg-[url('https://images.unsplash.com/photo-1504674900247-0877df9cc836')] bg-cover bg-center h-60 flex items-center justify-center relative">
+  <div class="absolute inset-0 bg-black/70"></div>
+  <h2 class="relative text-5xl font-extrabold text-amber-400 tracking-widest">Order Your Favorites</h2>
+</section>
+
+<main class="max-w-6xl mx-auto py-16 px-6 bg-gray-800 rounded-2xl shadow-xl -mt-20 relative z-10">
+
+<h3 class="text-3xl font-bold text-amber-400 mb-10 text-center">🛍️ Select Items & Enter Table Number</h3>
+
+<!-- Table Number -->
+<div class="mb-10 text-center">
+  <label for="tableNumber" class="block text-lg mb-2 text-gray-300">Table Number</label>
+  <input id="tableNumber" type="text" placeholder="Enter your table number" class="w-64 px-4 py-2 rounded-lg text-gray-900 focus:ring-2 focus:ring-amber-400 focus:outline-none">
+</div>
+
+<!-- Menu Items -->
+<div id="menuItems" class="space-y-12">
+
+<!-- Starters -->
+<section>
+  <h4 class="text-2xl font-bold text-amber-400 mb-4 border-b border-gray-600 pb-2">🥗 Starters</h4>
+  <div class="grid md:grid-cols-3 gap-6">
+    <div class="menu-item bg-gray-700 p-6 rounded-xl shadow" data-name="Garlic Bread" data-price="4.50">
+      <h5 class="text-xl font-semibold text-amber-300 mb-2">Garlic Bread</h5>
+      <p class="text-gray-400 mb-4">Toasted bread with garlic butter.</p>
+      <div class="flex justify-between items-center">
+        <span class="font-bold text-amber-300">$4.50</span>
+        <input type="number" min="0" value="0" class="quantity w-16 px-2 py-1 rounded text-gray-900 text-center" data-price="4.50">
+      </div>
+    </div>
+    <div class="menu-item bg-gray-700 p-6 rounded-xl shadow" data-name="Spring Rolls" data-price="5.00">
+      <h5 class="text-xl font-semibold text-amber-300 mb-2">Spring Rolls</h5>
+      <p class="text-gray-400 mb-4">Crispy rolls with veggie filling.</p>
+      <div class="flex justify-between items-center">
+        <span class="font-bold text-amber-300">$5.00</span>
+        <input type="number" min="0" value="0" class="quantity w-16 px-2 py-1 rounded text-gray-900 text-center" data-price="5.00">
+      </div>
+    </div>
+    <div class="menu-item bg-gray-700 p-6 rounded-xl shadow" data-name="Caesar Salad" data-price="6.50">
+      <h5 class="text-xl font-semibold text-amber-300 mb-2">Caesar Salad</h5>
+      <p class="text-gray-400 mb-4">Fresh lettuce, parmesan, croutons, creamy dressing.</p>
+      <div class="flex justify-between items-center">
+        <span class="font-bold text-amber-300">$6.50</span>
+        <input type="number" min="0" value="0" class="quantity w-16 px-2 py-1 rounded text-gray-900 text-center" data-price="6.50">
+      </div>
+    </div>
+    <div class="menu-item bg-gray-700 p-6 rounded-xl shadow" data-name="Soup of the Day" data-price="4.00">
+      <h5 class="text-xl font-semibold text-amber-300 mb-2">Soup of the Day</h5>
+      <p class="text-gray-400 mb-4">Chef’s daily special soup.</p>
+      <div class="flex justify-between items-center">
+        <span class="font-bold text-amber-300">$4.00</span>
+        <input type="number" min="0" value="0" class="quantity w-16 px-2 py-1 rounded text-gray-900 text-center" data-price="4.00">
+      </div>
+    </div>
+    <div class="menu-item bg-gray-700 p-6 rounded-xl shadow" data-name="Nachos" data-price="5.75">
+      <h5 class="text-xl font-semibold text-amber-300 mb-2">Nachos</h5>
+      <p class="text-gray-400 mb-4">Corn chips topped with cheese & jalapeños.</p>
+      <div class="flex justify-between items-center">
+        <span class="font-bold text-amber-300">$5.75</span>
+        <input type="number" min="0" value="0" class="quantity w-16 px-2 py-1 rounded text-gray-900 text-center" data-price="5.75">
+      </div>
+    </div>
+    <div class="menu-item bg-gray-700 p-6 rounded-xl shadow" data-name="Bruschetta" data-price="5.25">
+      <h5 class="text-xl font-semibold text-amber-300 mb-2">Bruschetta</h5>
+      <p class="text-gray-400 mb-4">Tomato & basil on toasted bread.</p>
+      <div class="flex justify-between items-center">
+        <span class="font-bold text-amber-300">$5.25</span>
+        <input type="number" min="0" value="0" class="quantity w-16 px-2 py-1 rounded text-gray-900 text-center" data-price="5.25">
+      </div>
+    </div>
+    <div class="menu-item bg-gray-700 p-6 rounded-xl shadow" data-name="Chicken Wings" data-price="6.99">
+      <h5 class="text-xl font-semibold text-amber-300 mb-2">Chicken Wings</h5>
+      <p class="text-gray-400 mb-4">Spicy & crispy wings.</p>
+      <div class="flex justify-between items-center">
+        <span class="font-bold text-amber-300">$6.99</span>
+        <input type="number" min="0" value="0" class="quantity w-16 px-2 py-1 rounded text-gray-900 text-center" data-price="6.99">
+      </div>
+    </div>
+    <div class="menu-item bg-gray-700 p-6 rounded-xl shadow" data-name="French Fries" data-price="3.99">
+      <h5 class="text-xl font-semibold text-amber-300 mb-2">French Fries</h5>
+      <p class="text-gray-400 mb-4">Golden crispy fries.</p>
+      <div class="flex justify-between items-center">
+        <span class="font-bold text-amber-300">$3.99</span>
+        <input type="number" min="0" value="0" class="quantity w-16 px-2 py-1 rounded text-gray-900 text-center" data-price="3.99">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Main Course -->
+<section>
+<h4 class="text-2xl font-bold text-amber-400 mb-4 border-b border-gray-600 pb-2">🍛 Main Course</h4>
+<div class="grid md:grid-cols-3 gap-6">
+  <div class="menu-item bg-gray-700 p-6 rounded-xl shadow" data-name="Grilled Chicken" data-price="12.99">
+    <h5 class="text-xl font-semibold text-amber-300 mb-2">Grilled Chicken</h5>
+    <p class="text-gray-400 mb-4">Tender chicken with herbs.</p>
+    <div class="flex justify-between items-center">
+      <span class="font-bold text-amber-300">$12.99</span>
+      <input type="number" min="0" value="0" class="quantity w-16 px-2 py-1 rounded text-gray-900 text-center" data-price="12.99">
+    </div>
+  </div>
+  <div class="menu-item bg-gray-700 p-6 rounded-xl shadow" data-name="Pasta Alfredo" data-price="10.99">
+    <h5 class="text-xl font-semibold text-amber-300 mb-2">Pasta Alfredo</h5>
+    <p class="text-gray-400 mb-4">Creamy sauce & parmesan.</p>
+    <div class="flex justify-between items-center">
+      <span class="font-bold text-amber-300">$10.99</span>
+      <input type="number" min="0" value="0" class="quantity w-16 px-2 py-1 rounded text-gray-900 text-center" data-price="10.99">
+    </div>
+  </div>
+  <div class="menu-item bg-gray-700 p-6 rounded-xl shadow" data-name="Beef Steak" data-price="14.50">
+    <h5 class="text-xl font-semibold text-amber-300 mb-2">Beef Steak</h5>
+    <p class="text-gray-400 mb-4">Grilled to perfection.</p>
+    <div class="flex justify-between items-center">
+      <span class="font-bold text-amber-300">$14.50</span>
+      <input type="number" min="0" value="0" class="quantity w-16 px-2 py-1 rounded text-gray-900 text-center" data-price="14.50">
+    </div>
+  </div>
+  <div class="menu-item bg-gray-700 p-6 rounded-xl shadow" data-name="Fried Rice" data-price="8.99">
+    <h5 class="text-xl font-semibold text-amber-300 mb-2">Fried Rice</h5>
+    <p class="text-gray-400 mb-4">With veggies & eggs.</p>
+    <div class="flex justify-between items-center">
+      <span class="font-bold text-amber-300">$8.99</span>
+      <input type="number" min="0" value="0" class="quantity w-16 px-2 py-1 rounded text-gray-900 text-center" data-price="8.99">
+    </div>
+  </div>
+  <div class="menu-item bg-gray-700 p-6 rounded-xl shadow" data-name="Fish Fillet" data-price="11.25">
+    <h5 class="text-xl font-semibold text-amber-300 mb-2">Fish Fillet</h5>
+    <p class="text-gray-400 mb-4">Lightly battered and fried.</p>
+    <div class="flex justify-between items-center">
+      <span class="font-bold text-amber-300">$11.25</span>
+      <input type="number" min="0" value="0" class="quantity w-16 px-2 py-1 rounded text-gray-900 text-center" data-price="11.25">
+    </div>
+  </div>
+  <div class="menu-item bg-gray-700 p-6 rounded-xl shadow" data-name="Veggie Burger" data-price="9.75">
+    <h5 class="text-xl font-semibold text-amber-300 mb-2">Veggie Burger</h5>
+    <p class="text-gray-400 mb-4">Healthy and delicious.</p>
+    <div class="flex justify-between items-center">
+      <span class="font-bold text-amber-300">$9.75</span>
+      <input type="number" min="0" value="0" class="quantity w-16 px-2 py-1 rounded text-gray-900 text-center" data-price="9.75">
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- Beverages -->
+<section>
+<h4 class="text-2xl font-bold text-amber-400 mb-4 border-b border-gray-600 pb-2">☕ Beverages & Drinks</h4>
+<div class="grid md:grid-cols-3 gap-6">
+  <div class="menu-item bg-gray-700 p-6 rounded-xl shadow" data-name="Latte" data-price="3.99">
+    <h5 class="text-xl font-semibold text-amber-300 mb-2">Latte</h5>
+    <p class="text-gray-400 mb-4">Smooth espresso with milk.</p>
+    <div class="flex justify-between items-center">
+      <span class="font-bold text-amber-300">$3.99</span>
+      <input type="number" min="0" value="0" class="quantity w-16 px-2 py-1 rounded text-gray-900 text-center" data-price="3.99">
+    </div>
+  </div>
+  <div class="menu-item bg-gray-700 p-6 rounded-xl shadow" data-name="Cappuccino" data-price="3.75">
+    <h5 class="text-xl font-semibold text-amber-300 mb-2">Cappuccino</h5>
+    <p class="text-gray-400 mb-4">Espresso with frothy milk.</p>
+    <div class="flex justify-between items-center">
+      <span class="font-bold text-amber-300">$3.75</span>
+      <input type="number" min="0" value="0" class="quantity w-16 px-2 py-1 rounded text-gray-900 text-center" data-price="3.75">
+    </div>
+  </div>
+  <div class="menu-item bg-gray-700 p-6 rounded-xl shadow" data-name="Orange Juice" data-price="3.50">
+    <h5 class="text-xl font-semibold text-amber-300 mb-2">Orange Juice</h5>
+    <p class="text-gray-400 mb-4">Freshly squeezed.</p>
+    <div class="flex justify-between items-center">
+      <span class="font-bold text-amber-300">$3.50</span>
+      <input type="number" min="0" value="0" class="quantity w-16 px-2 py-1 rounded text-gray-900 text-center" data-price="3.50">
+    </div>
+  </div>
+  <div class="menu-item bg-gray-700 p-6 rounded-xl shadow" data-name="Lemonade" data-price="3.25">
+    <h5 class="text-xl font-semibold text-amber-300 mb-2">Lemonade</h5>
+    <p class="text-gray-400 mb-4">Refreshing drink with lemon & mint.</p>
+    <div class="flex justify-between items-center">
+      <span class="font-bold text-amber-300">$3.25</span>
+      <input type="number" min="0" value="0" class="quantity w-16 px-2 py-1 rounded text-gray-900 text-center" data-price="3.25">
+    </div>
+  </div>
+  <div class="menu-item bg-gray-700 p-6 rounded-xl shadow" data-name="Iced Coffee" data-price="4.25">
+    <h5 class="text-xl font-semibold text-amber-300 mb-2">Iced Coffee</h5>
+    <p class="text-gray-400 mb-4">Cold espresso over ice.</p>
+    <div class="flex justify-between items-center">
+      <span class="font-bold text-amber-300">$4.25</span>
+      <input type="number" min="0" value="0" class="quantity w-16 px-2 py-1 rounded text-gray-900 text-center" data-price="4.25">
+    </div>
+  </div>
+  <div class="menu-item bg-gray-700 p-6 rounded-xl shadow" data-name="Smoothie" data-price="4.75">
+    <h5 class="text-xl font-semibold text-amber-300 mb-2">Smoothie</h5>
+    <p class="text-gray-400 mb-4">Blend of fruits & yogurt.</p>
+    <div class="flex justify-between items-center">
+      <span class="font-bold text-amber-300">$4.75</span>
+      <input type="number" min="0" value="0" class="quantity w-16 px-2 py-1 rounded text-gray-900 text-center" data-price="4.75">
+    </div>
+  </div>
+  <div class="menu-item bg-gray-700 p-6 rounded-xl shadow" data-name="Espresso" data-price="2.50">
+    <h5 class="text-xl font-semibold text-amber-300 mb-2">Espresso</h5>
+    <p class="text-gray-400 mb-4">Strong Italian coffee shot.</p>
+    <div class="flex justify-between items-center">
+      <span class="font-bold text-amber-300">$2.50</span>
+      <input type="number" min="0" value="0" class="quantity w-16 px-2 py-1 rounded text-gray-900 text-center" data-price="2.50">
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- Desserts -->
+<section>
+<h4 class="text-2xl font-bold text-amber-400 mb-4 border-b border-gray-600 pb-2">🍰 Desserts & Ice Cream</h4>
+<div class="grid md:grid-cols-3 gap-6">
+  <div class="menu-item bg-gray-700 p-6 rounded-xl shadow" data-name="Vanilla Ice Cream" data-price="3.99">
+    <h5 class="text-xl font-semibold text-amber-300 mb-2">Vanilla</h5>
+    <p class="text-gray-400 mb-4">Classic vanilla flavor.</p>
+    <div class="flex justify-between items-center">
+      <span class="font-bold text-amber-300">$3.99</span>
+      <input type="number" min="0" value="0" class="quantity w-16 px-2 py-1 rounded text-gray-900 text-center" data-price="3.99">
+    </div>
+  </div>
+  <div class="menu-item bg-gray-700 p-6 rounded-xl shadow" data-name="Chocolate Ice Cream" data-price="4.25">
+    <h5 class="text-xl font-semibold text-amber-300 mb-2">Chocolate</h5>
+    <p class="text-gray-400 mb-4">Rich chocolate flavor.</p>
+    <div class="flex justify-between items-center">
+      <span class="font-bold text-amber-300">$4.25</span>
+      <input type="number" min="0" value="0" class="quantity w-16 px-2 py-1 rounded text-gray-900 text-center" data-price="4.25">
+    </div>
+  </div>
+  <div class="menu-item bg-gray-700 p-6 rounded-xl shadow" data-name="Strawberry Ice Cream" data-price="4.25">
+    <h5 class="text-xl font-semibold text-amber-300 mb-2">Strawberry</h5>
+    <p class="text-gray-400 mb-4">Fresh strawberry flavor.</p>
+    <div class="flex justify-between items-center">
+      <span class="font-bold text-amber-300">$4.25</span>
+      <input type="number" min="0" value="0" class="quantity w-16 px-2 py-1 rounded text-gray-900 text-center" data-price="4.25">
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- Total & Place Order -->
+<div class="text-center mt-12">
+  <h4 class="text-2xl font-bold text-amber-400 mb-4">Total: $<span id="total">0.00</span></h4>
+  <button id="placeOrder" class="bg-green-500 hover:bg-green-600 text-gray-900 px-10 py-3 rounded-full font-semibold text-lg transition">Place Order</button>
+</div>
+
+<!-- Confirmation -->
+<div id="confirmation" class="hidden text-center mt-10 text-green-400 text-xl font-semibold">
+  ✅ Thank you! Your order for <span id="orderedItems"></span> has been placed.<br>
+  🍽️ We’ll serve you soon at <strong>Table <span id="tableOut"></span></strong>.
+</div>
+
+</main>
+
+<footer class="bg-gray-800 py-10 text-center mt-16">
+<p class="text-gray-400">&copy; 2025 Garage Dinning. All rights reserved.</p>
+</footer>
+
+<script>
+const quantities = document.querySelectorAll('.quantity');
+const totalDisplay = document.getElementById('total');
+const placeOrderBtn = document.getElementById('placeOrder');
+const confirmation = document.getElementById('confirmation');
+const orderedItemsDisplay = document.getElementById('orderedItems');
+const tableOut = document.getElementById('tableOut');
+const tableInput = document.getElementById('tableNumber');
+
+function calculateTotal() {
+  let total = 0;
+  quantities.forEach(input => {
+    const qty = parseInt(input.value) || 0; // ensure number
+    const price = parseFloat(input.dataset.price) || 0;
+    total += qty * price;
+  });
+  // Round to 2 decimals to avoid floating point issues
+  total = Math.round((total + Number.EPSILON) * 100) / 100;
+  totalDisplay.textContent = total.toFixed(2);
+  return total;
+}
+
+
+quantities.forEach(input => input.addEventListener('input', calculateTotal));
+
+placeOrderBtn.addEventListener('click', () => {
+  const table = tableInput.value.trim();
+  if (!table) return alert("Please enter your table number.");
+
+  const selectedItems = [];
+  quantities.forEach(input => {
+    const qty = parseInt(input.value);
+    const name = input.closest('.menu-item').dataset.name;
+    if (qty > 0) selectedItems.push(`${qty} x ${name}`);
+  });
+
+  if (selectedItems.length === 0) return alert("Please select at least one item.");
+
+  orderedItemsDisplay.textContent = selectedItems.join(", ");
+  tableOut.textContent = table;
+  confirmation.classList.remove('hidden');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
+
+</body>
+</html>
